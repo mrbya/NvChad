@@ -26,6 +26,7 @@ local plugins = {
                 "eslint-lsp",
                 "js-debug-adapter",
                 "typescript-language-server",
+                "emmet-language-server"
             },
         },
     },
