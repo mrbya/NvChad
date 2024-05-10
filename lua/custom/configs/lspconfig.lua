@@ -13,5 +13,14 @@ lspconfig.clangd.setup {
 }
 
 lspconfig.cmake.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
 
+lspconfig.ginko_ls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = {
+        'dts', 'dtsi', 'overlay',
+    },
 }
