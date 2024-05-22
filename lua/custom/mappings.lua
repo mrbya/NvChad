@@ -9,7 +9,7 @@ M.dap = {
         },
         ["<leader>dr"] = {
             "<cmd> DapContinue <CR>",
-            "Run debugger (start or continue)",
+            "Run and debug / continue",
         },
         ["<leader>dt"] = {
             "<cmd> DapTerminate <CR>",
