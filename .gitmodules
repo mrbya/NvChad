@@ -1,0 +1,3 @@
+[submodule "mappings"]
+	path = lua/custom/mappings
+	url = https://gitlab.com/arch-zephyrus/nvim-mappings.git
