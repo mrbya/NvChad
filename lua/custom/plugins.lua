@@ -20,6 +20,44 @@ local plugins = {
         end
     },
     {
+        "neovim/nvim-lspconfig",
+        config = function ()
+            require "plugins.configs.lspconfig"
+            require "custom.configs.lspconfig"
+        end,
+    },
+    {
+        'SuperBo/fugit2.nvim',
+        opts = {
+            width = 70,
+        },
+            dependencies = {
+            'MunifTanjim/nui.nvim',
+            'nvim-tree/nvim-web-devicons',
+            'nvim-lua/plenary.nvim',
+            {
+                'chrisgrieser/nvim-tinygit', -- optional: for Github PR view
+                dependencies = { 'stevearc/dressing.nvim' }
+            },
+        },
+        cmd = {
+            'Fugit2',
+            'Fugit2Diff',
+            'Fugit2Graph'
+        },
+        lazy = false,
+    },
+    {
+        dir = '.',
+        name = 'keyloader',
+        config = function ()
+            for section, x in pairs(require('custom.mappings.mappings')) do
+                require('core.utils').load_mappings(section)
+            end
+        end,
+        lazy = false
+    },
+    {
         "williamboman/mason.nvim",
         opts = {
             ensure_installed = {
@@ -29,13 +67,6 @@ local plugins = {
                 "emmet-language-server"
             },
         },
-    },
-    {
-        "neovim/nvim-lspconfig",
-        config = function ()
-            require "plugins.configs.lspconfig"
-            require "custom.configs.lspconfig"
-        end,
     },
 }
 return plugins
