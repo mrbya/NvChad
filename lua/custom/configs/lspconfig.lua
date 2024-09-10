@@ -9,7 +9,7 @@ lspconfig.verible.setup {
     capabilities = capabilities,
     cmd = {
         'verible-verilog-ls',
-        '--rules=-explicit-parameter-storage-type,-no-trailing-spaces'
+        '--rules=-explicit-parameter-storage-type,-no-trailing-spaces,-parameter-name-style,-line-length,-unpacked-dimensions-range-ordering'
     },
 }
 
