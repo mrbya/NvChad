@@ -53,9 +53,11 @@ local plugins = {
     {
         'williamboman/mason.nvim',
         opts = {
-            'solargraph',
-            'rubocop',
-            'codelldb',
+            ensure_installed = {
+                'solargraph',
+                'rubocop',
+                'codelldb',
+            }
         }
     },
 }
