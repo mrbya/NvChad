@@ -9,7 +9,8 @@ lspconfig.solargraph.setup {
     capabilities = capabilities,
 }
 
-lspconfig.rubocop.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-}
+-- rubocop LSP setup as an alternative for solargraph
+-- lspconfig.rubocop.setup {
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+-- }
