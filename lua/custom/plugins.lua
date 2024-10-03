@@ -17,19 +17,32 @@ local plugins = {
             },
         },
     },
-    -- nvim-lint config for rubocop for direct integration into nvim
-    -- {
-    --     'mfussenegger/nvim-lint',
-    --     event = 'VeryLazy',
-    --     config = function ()
-    --         require 'custom.configs.lint'
-    --     end
-    -- },
+    {
+        'mrbya/nvim-on-rails',
+        -- dir = '/home/mrbya/mycodes/lua/nvim-on-rails/',
+        -- name = 'nvim-on-rails',
+        event = 'VeryLazy',
+        opts = {
+            load_keymaps = {
+                editor = false,
+                shell = true,
+                generator = true,
+                rails = true,
+            }
+        },
+    },
     {
         'neovim/nvim-lspconfig',
         config = function()
             require 'plugins.configs.lspconfig'
             require 'custom.configs.lspconfig'
+
+            -- vim.api.nvim_create_autocmd('BufWritePre', {
+            --     pattern = '*.rb',
+            --     callback = function()
+            --         vim.lsp.buf.format()
+            --     end,
+            -- })
         end
     },
     {
@@ -37,7 +50,7 @@ local plugins = {
         opts = {
             width = 70,
         },
-            dependencies = {
+        dependencies = {
             'MunifTanjim/nui.nvim',
             'nvim-tree/nvim-web-devicons',
             'nvim-lua/plenary.nvim',
@@ -70,6 +83,7 @@ local plugins = {
                 'solargraph',
                 'rubocop',
                 'codelldb',
+                'emmet-language-server',
             }
         }
     },
