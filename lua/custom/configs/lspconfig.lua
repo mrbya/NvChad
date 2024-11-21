@@ -18,3 +18,8 @@ lspconfig.emmet_language_server.setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
+
+lspconfig.svelte.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
