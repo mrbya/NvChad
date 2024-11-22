@@ -4,14 +4,9 @@ local capabilities = base.capabilities
 
 local lspconfig = require("lspconfig")
 
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
-    init_options = {
-        preferences = {
-            disableSuggestions = true,
-        },
-    },
 }
 
 lspconfig.emmet_language_server.setup {
