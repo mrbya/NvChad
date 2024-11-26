@@ -1,5 +1,5 @@
 require('lint').linters_by_ft = {
-    javascript = {'exlint'},
+    javascript = {'eslint'},
     typescript = {'eslint'},
 }
 
