@@ -17,10 +17,28 @@ opt.cursorline = true
 
 -- Indenting
 opt.expandtab = true
-opt.shiftwidth = 4
+opt.shiftwidth = 2
 opt.smartindent = true
-opt.tabstop = 4
-opt.softtabstop = 4
+opt.tabstop = 2
+opt.softtabstop = 2
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = {"javascript", "javascriptreact", "typescript", "typescriptreact", "svelte", "vue"},
+    callback = function()
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.tabstop = 2
+        vim.opt_local.softtabstop = 2
+    end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = {"rust"},
+    callback = function()
+        vim.opt_local.shiftwidth = 4
+        vim.opt_local.tabstop = 4
+        vim.opt_local.softtabstop = 4
+    end,
+})
 
 opt.fillchars = { eob = " " }
 opt.ignorecase = true
