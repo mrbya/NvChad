@@ -13,6 +13,20 @@ local plugins = {
         },
     },
     {
+        'neomark',
+        dir = '~/mycodes/lua/neomark',
+        event = 'VeryLazy',
+        config = function ()
+            require('neomark').setup()
+        end
+    },
+    {
+      'nfrid/markdown-togglecheck',
+      dependencies = { 'nfrid/treesitter-utils' },
+        lazy = false,
+      ft = { 'markdown' },
+    },
+    {
         "neovim/nvim-lspconfig",
         config = function ()
             require 'plugins.configs.lspconfig'
