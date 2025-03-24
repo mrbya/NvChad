@@ -13,6 +13,18 @@ local plugins = {
         },
     },
     {
+        'bober-kurwa',
+        dir = '~/mycodes/lua/bober',
+        event = 'VeryLazy',
+        opts = {},
+    },
+    {
+        'aislave.nvim',
+        dir = '~/mycodes/lua/aislave',
+        event = 'VeryLazy',
+        opts = {},
+    },
+    {
         "neovim/nvim-lspconfig",
         config = function ()
             require 'plugins.configs.lspconfig'
