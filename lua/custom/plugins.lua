@@ -86,9 +86,11 @@ local plugins = {
         dir = '.',
         name = 'keyloader',
         config = function ()
-            for section, x in pairs(require('custom.mappings.mappings')) do
+            for section, _ in pairs(require('custom.mappings.mappings')) do
                 require('core.utils').load_mappings(section)
             end
+
+            require('custom.configs.tags')
         end,
         lazy = false
     },
