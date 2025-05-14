@@ -31,7 +31,7 @@ vim.keymap.set(
 vim.api.nvim_create_augroup("AutoUpdateTags", { clear = true })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "*.v", "*.sv" },
+  pattern = { "*.v", "*.sv", "*.c", "*.cpp", "*.h", "*.hpp" },
   group = "AutoUpdateTags",
   callback = function()
     vim.fn.jobstart({ "ctags", "-R", "." }, { stdout_buffered = true, stderr_buffered = true })
