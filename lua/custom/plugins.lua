@@ -13,6 +13,13 @@ local plugins = {
         },
     },
     {
+        "stevearc/conform.nvim",
+        event = "VeryLazy",
+        config = function ()
+            require 'custom.configs.conform'
+        end
+    },
+    {
         "rcarriga/nvim-dap-ui",
         event = "VeryLazy",
         dependencies = {
@@ -99,8 +106,8 @@ local plugins = {
                 "clangd",
                 "codelldb",
                 "cmake-language-server",
-                "ginko",
-                "ginko_ls"
+                "ginko_ls",
+                "clang-format",
             }
         }
     }
